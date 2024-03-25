@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hotel_reservation1/constants.dart';
 import 'smallpageindicator.dart';
 import 'package:hotel_reservation1/main.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -155,7 +156,7 @@ class HomePage extends StatelessWidget {
                             ],
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 4,
                         ),
                         Expanded(
@@ -269,10 +270,33 @@ class HomePage extends StatelessWidget {
                         ],
                       )
                     ],
-                  )
+                  ),
+                  const GNav(
+                    gap: 8,
+                    backgroundColor: Colors.white,
+                    // tabBackgroundColor: kGreyColor,
+                    padding: EdgeInsets.all(10),
+                    color: Colors.black12,
+                    activeColor: kLightBlueColor,
+                    tabs: [
+                      GButton(icon: Icons.explore, text: 'Explore'),
+                      GButton(
+                        icon: Icons.note,
+                        text: 'My Bookings',
+                      ),
+                      GButton(
+                        icon: Icons.notifications_none_outlined,
+                        text: 'Notification',
+                      ),
+                      GButton(
+                        icon: Icons.person_3_outlined,
+                        text: 'Profile',
+                      ),
+                    ],
+                  ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),

@@ -13,7 +13,7 @@ class OnboardingPage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            Padding(padding: EdgeInsets.only(top: 50),
+            const Padding(padding: EdgeInsets.only(top: 50),
             child: Text(
               'Find The Best Place to Stress Release',
               style: TextStyle(
@@ -37,7 +37,7 @@ class OnboardingPage extends StatelessWidget {
                   controller: _controller,
                   count: 3,
                   axisDirection: Axis.horizontal,
-                  effect: SlideEffect(
+                  effect: const SlideEffect(
                       spacing: 8.0,
                       radius: 4.0,
                       dotWidth: 10.0,
@@ -50,16 +50,16 @@ class OnboardingPage extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Text('Skip',style: TextStyle(fontSize:14,fontWeight: FontWeight.normal,color: Colors.grey ,fontFamily: 'Roboto'),),
-                    SizedBox(width: 15),
+                    const Text('Skip',style: TextStyle(fontSize:14,fontWeight: FontWeight.normal,color: Colors.grey ,fontFamily: 'Roboto'),),
+                    const SizedBox(width: 15),
                     Container(
                       height: 40,
                       width: 40,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           color: kYellowColor,
                         shape: BoxShape.circle
                       ),
-                        child: Icon(Icons.arrow_forward,color:kLightBlueColor),),
+                        child: const Icon(Icons.arrow_forward,color:kLightBlueColor),),
                   ],
                 ),
               ],
@@ -67,7 +67,7 @@ class OnboardingPage extends StatelessWidget {
             Container(
               height: 450,
               width: double.infinity,
-              decoration: BoxDecoration(image:DecorationImage(image: AssetImage('assets/beach1.jpg'),)),
+              decoration: const BoxDecoration(image:DecorationImage(image: AssetImage('assets/beach1.jpg'),)),
             )
           ],
         ),
